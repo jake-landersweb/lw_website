@@ -1,0 +1,16 @@
+{% load tailwind_tags %}
+
+<div class="flex p-2 md:pd-10 space-x-16 lg:space-x-20">
+    {% include "top_bar/bar_item.html" with title="Services" %}
+    {% include "top_bar/bar_item.html" with title="Products" %}
+    {% include "top_bar/bar_item.html" with title="Examples" %}
+    {% include "top_bar/bar_item.html" with title="Pricing" %}
+    {% include "top_bar/bar_item.html" with title="Company" %}
+    <a href="https://jakelanders.com" target="_blank">
+        <div class="">
+            <h3 class="text-white text-opacity-50 font-extralight hover:text-opacity-100">
+                Blog
+            </h3>
+        </div>
+    </a>
+</div>

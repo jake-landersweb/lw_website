@@ -1,0 +1,92 @@
+{% load tailwind_tags %}
+
+<div class="m-8 space-y-4">
+    <!-- title -->
+    <div>
+        <h2 class="text-4xl font-extralight">
+            Pricing
+        </h2>
+    </div>
+    <div class="md:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-4 space-y-4 md:space-y-0">
+        <!-- free consultation -->
+        <div class="bg-white w-full rounded-2xl space-y-6 flex flex-col 
+        items-center justify-start hover:scale-100 transition-all shadow-sm scale-95">
+            <!-- top accent -->
+            <div class="bg-main bg-opacity-30 rounded-t-2xl w-full flex flex-col items-center justify-center p-3">
+                <h2 class="font-medium text-main text-xl tracking-wider">
+                    FREE CONSULTATION
+                </h2>
+            </div>
+            <span class="iconify text-main flex flex-col 
+            items-center justify-center" data-icon="ic:baseline-remove-red-eye" data-width="200"
+                data-height="100"></span>
+            <div class="space-y-4 flex flex-col items-center justify-center">
+                <h3 class="font-extrabold text-cgray-400 text-sm">FROM</h3>
+                <h2 class="text-gray-400 font-extralight text-8xl">
+                    $0
+                </h2>
+            </div>
+            <div class="space-y-3 p-4 pb-8 text-gray-500">
+                {% include "main/pricing_bullet.html" with body="App Development" color="main" %}
+                {% include "main/pricing_bullet.html" with body="Website Design" color="main" %}
+                {% include "main/pricing_bullet.html" with body="API Development" color="main" %}
+                {% include "main/pricing_bullet.html" with body="AWS Development" color="main" %}
+                {% include "main/pricing_bullet.html" with body="Salesforce Development" color="main" %}
+                {% include "main/pricing_bullet.html" with body="E-Commerce Solutions and Integration" color="main" %}
+            </div>
+        </div>
+        <!-- app development -->
+        <div
+            class="bg-acc-salmon bg-opacity-30 w-full rounded-2xl space-y-6 flex flex-col items-center justify-start hover:scale-105 transition-all shadow-sm">
+            <!-- top accent -->
+            <div class="rounded-t-2xl w-full flex flex-col items-center justify-center p-3">
+                <h2 class="font-medium text-acc-salmon text-xl tracking-wider">
+                    APP DEVELOPMENT
+                </h2>
+            </div>
+            <span class="iconify text-acc-salmon flex flex-col 
+            items-center justify-center" data-icon="ic:outline-phone-android" data-width="200"
+                data-height="100"></span>
+            <div class="space-y-4 flex flex-col items-center justify-center">
+                <h3 class="font-extrabold text-cgray-400 text-sm">FROM</h3>
+                <h2 class="text-gray-100 font-extralight text-8xl">
+                    $7,500
+                </h2>
+            </div>
+            <div class="space-y-3 p-4 pb-8 text-white">
+                {% include "main/pricing_bullet.html" with body="Cross-Platform" color="acc-salmon" %}
+                {% include "main/pricing_bullet.html" with body="Native Performance" color="acc-salmon" %}
+                {% include "main/pricing_bullet.html" with body="Fluid UI" color="acc-salmon" %}
+                {% include "main/pricing_bullet.html" with body="Integrated NoSQL Database" color="acc-salmon" %}
+                {% include "main/pricing_bullet.html" with body="iPad Apps" color="acc-salmon" %}
+                {% include "main/pricing_bullet.html" with body="Continued Support" color="acc-salmon" %}
+            </div>
+        </div>
+        <!-- full stack -->
+        <div class="bg-white w-full rounded-2xl space-y-6 flex flex-col 
+        items-center justify-start hover:scale-100 transition-all shadow-sm scale-95">
+            <!-- top accent -->
+            <div class="bg-acc-pink bg-opacity-30 rounded-t-2xl w-full flex flex-col items-center justify-center p-3">
+                <h2 class="font-medium text-acc-pink text-xl tracking-wider">
+                    FULLY INTEGRATED SOLUTION
+                </h2>
+            </div>
+            <span class="iconify text-acc-pink flex flex-col 
+            items-center justify-center" data-icon="ic:baseline-miscellaneous-services" data-width="200"
+                data-height="100"></span>
+            <div class="space-y-4 flex flex-col items-center justify-center">
+                <h3 class="font-extrabold text-cgray-400 text-sm">FROM</h3>
+                <h2 class="text-gray-400 font-extralight text-8xl">
+                    $12,500
+                </h2>
+            </div>
+            <div class="space-y-3 p-4 pb-8 text-gray-500">
+                {% include "main/pricing_bullet.html" with body="Custom Website" color="acc-pink" %}
+                {% include "main/pricing_bullet.html" with body="Matching App" color="acc-pink" %}
+                {% include "main/pricing_bullet.html" with body="Full Featured Database" color="acc-pink" %}
+                {% include "main/pricing_bullet.html" with body="Web SEO" color="acc-pink" %}
+                {% include "main/pricing_bullet.html" with body="E-Commerce" color="acc-pink" %}
+            </div>
+        </div>
+    </div>
+</div>

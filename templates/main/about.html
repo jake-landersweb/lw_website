@@ -1,0 +1,44 @@
+{% load static %}
+{% load tailwind_tags %}
+
+<div class="m-8 space-y-4 pb-12">
+    <!-- title -->
+    <div>
+        <h2 class="text-4xl font-extralight">
+            About Us
+        </h2>
+    </div>
+    <!-- kevin about -->
+    <div class="md:flex md:space-x-8 space-y-4 md:space-y-0">
+        <img src="{% static 'images/jake.png' %}" alt="" class="w-56">
+        <div class="space-y-8">
+            <h2 class="text-2xl font-bold">
+                Kevin Landers
+            </h2>
+            <p class="md:max-w-screen-lg">
+                Kevin is the web development expert. With 20+ years of experience, he can take your wildest ideas and
+                translate them into a fast and responsive website or web app. He is an expert in .NET, relational
+                databased, and AWS services. On his free time, he likes to play golf and play Men's league hockey on his
+                hockey team, <a href="https://pucknorris.com" target="_blank"
+                    class="text-main hover:opacity-50 underline">pucknorris.com</a>
+            </p>
+        </div>
+    </div>
+    <!-- jake about -->
+    <div class="md:flex md:space-x-8 space-y-4 md:space-y-0">
+        <img src="{% static 'images/jake.png' %}" alt="" class="w-56">
+        <div class="space-y-8">
+            <h2 class="text-2xl font-bold">
+                Jake Landers
+            </h2>
+            <p class="md:max-w-screen-lg">
+                Jake is a mobile development wiz. He has mastered the Flutter framwork over the past 2 years, code which
+                you can see on his blog, <a href="https://jakelanders.com" target="_blank"
+                    class="text-main hover:opacity-50 underline">jakelanders.com</a>. Jake is also responsible for non
+                relational database development, using tools such as AWS dyanoDB and MongoDB, and native iOS and macOS
+                development, using UIKit, AppKit, and SwiftUI. In his free time he loves to play hockey and attend his
+                courses at Washington State University.
+            </p>
+        </div>
+    </div>
+</div>

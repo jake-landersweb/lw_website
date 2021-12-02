@@ -1,0 +1,130 @@
+{% load static %}
+{% load tailwind_tags %}
+
+<div class="m-8 space-y-4">
+    <!-- title -->
+    <div>
+        <h2 class="text-4xl font-extralight">
+            Examples:
+        </h2>
+    </div>
+    <!-- crosscheck -->
+    {% with xc_apple="https://apps.apple.com/us/app/crosscheck-hockey/id1585600361" %}
+    {% with xc_google="https://play.google.com/store/apps/details?id=com.landersweb.pnflutter" %}
+    {% with xc_web="https://xcheck.app" %}
+    <div
+        class="bg-main bg-opacity-30 rounded-2xl p-4 md:p-8 xl:flex items-center justify-between space-y-4 xl:space-y-0">
+        <div class="space-y-4">
+            <h2 class="text-3xl font-extralight text-main opacity-50 tracking-wider">
+                CROSSCHECK
+            </h2>
+            <div class="space-y-8">
+                <p class="text-white font-bold text-xl xl:pr-10">
+                    Helps users manage their sports team elegantly, easily, and effectively.
+                </p>
+                <div class="md:flex space-x-4 xl:flex-col xl:space-y-4 xl:space-x-0 xl:items-start hidden">
+                    <a href="{{ xc_apple }}" target="_blank"><img src="{% static 'svg/apple_app.svg' %}"
+                            alt="Download on Apple App Store" class="h-16 hover:scale-105 transition-all"></a>
+                    <a href="{{ xc_google }}" target="_blank"><img src="{% static 'svg/google_app.svg' %}"
+                            alt="Download on Google Play Store" class="h-16 hover:scale-105 transition-all"></a>
+                    <a href="{{ xc_web }}" target="_blank">
+                        <div
+                            class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
+                            <img src="{% static 'images/x_centered.png' %}" class="h-12">
+                            <div>
+                                <h2 class="text-white font-light">
+                                    Visit
+                                </h2>
+                                <h4 class="text-2xl text-white font-medium">
+                                    xcheck.app
+                                </h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sm:flex sm:space-x-8 sm:space-y-0 space-y-4">
+            <img src="{% static 'images/xcheck_light.png' %}" alt="" class="max-w-xs">
+            <img src="{% static 'images/xcheck_menu.png' %}" alt="" class="max-w-xs">
+            <img src=" {% static 'images/xcheck_event.png' %}" alt="" class="max-w-xs">
+        </div>
+        <div class="md:hidden items-start">
+            <a href="{{ xc_apple }}" target="_blank"><img src="{% static 'svg/apple_app.svg' %}"
+                    alt="Download on Apple App Store" class="h-16 hover:scale-105 transition-all"></a>
+            <a href="{{ xc_google }}" target="_blank"><img src="{% static 'svg/google_app.svg' %}"
+                    alt="Download on Google Play Store" class="h-16 hover:scale-105 transition-all my-4"></a>
+            <div class="flex">
+                <a href="{{ xc_web }}" target="_blank">
+                    <div
+                        class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
+                        <img src="{% static 'images/x_centered.png' %}" class="h-12">
+                        <div>
+                            <h2 class="text-white font-light">
+                                Visit
+                            </h2>
+                            <h4 class="text-2xl text-white font-medium">
+                                xcheck.app
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="h-full"></div>
+            </div>
+        </div>
+    </div>
+    {% endwith %}
+    {% endwith %}{% endwith %}
+    <!-- coding blog -->
+    {% with jl_web="https://jakelanders.com" %}
+    <div
+        class="bg-acc-pink bg-opacity-30 rounded-2xl p-4 md:p-8 xl:flex items-center justify-between space-y-4 xl:space-y-0">
+        <div class="space-y-4">
+            <h2 class="text-3xl font-extralight text-acc-pink opacity-50 tracking-wider">
+                CODING BLOG
+            </h2>
+            <div class="space-y-8">
+                <p class="text-white font-bold text-xl xl:pr-10">
+                    Show off your smooth coding skills in a stylish and lightweight blog.
+                </p>
+                <div class="md:flex space-x-4 xl:flex-col xl:space-y-4 xl:space-x-0 xl:items-start hidden">
+                    <a href="{{ jl_Web }}" target="_blank">
+                        <div
+                            class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
+                            <div>
+                                <h2 class="text-white font-light">
+                                    Visit
+                                </h2>
+                                <h4 class="text-2xl text-white font-medium">
+                                    jakelanders.com
+                                </h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sm:flex sm:space-x-8 sm:space-y-0 space-y-4">
+            <img src="{% static 'images/jake_web.png' %}" alt="" class="w-full rounded-lg">
+        </div>
+        <div class="md:hidden items-start">
+            <div class="flex">
+                <a href="{{ jl_web }}" target="_blank">
+                    <div
+                        class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
+                        <div>
+                            <h2 class="text-white font-light">
+                                Visit
+                            </h2>
+                            <h4 class="text-2xl text-white font-medium">
+                                jakelanders.com
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="h-full"></div>
+            </div>
+        </div>
+    </div>
+    {% endwith %}
+</div>
