@@ -21,6 +21,9 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
+            transitionProperty: {
+                height: 'height'
+            },
             colors: {
                 cgray: {
                     100: "#a9a9a9",
@@ -40,6 +43,10 @@ module.exports = {
                     300: "#024375",
                     400: "#024375",
                     DEFAULT: "#024375",
+                },
+                theme: {
+                    main: "#5dcfb8",
+                    bg: "#0e152e",
                 },
                 acc: {
                     salmon: "#ee5c7a",

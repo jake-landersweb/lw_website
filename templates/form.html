@@ -1,0 +1,33 @@
+<div class="lg:w-1/2">
+    <form method="post">
+        {% csrf_token %}
+        <div class="bg-white bg-opacity-30 rounded-2xl p-4 space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-white text-4xl font-bold">
+                    Contact Us
+                </h2>
+                <div
+                    class="px-4 py-2 bg-red-700 bg-opacity-30 text-red-700 rounded-xl {% if not error %} hidden {% endif %}">
+                    <h3>
+                        {{ error }}
+                    </h3>
+                </div>
+            </div>
+
+            <input id="name" type="text" name="name" id="name" value="{{ name }}" placeholder='Your Name'
+                class="bg-white bg-opacity-80 px-4 py-2 rounded-md w-full border-0 hover:border-main">
+            <input id="email" type="text" name="email" id="email" value="{{ email }}" placeholder='Your Email'
+                class="bg-white bg-opacity-80 px-4 py-2 rounded-md w-full border-0 hover:border-main">
+            <textarea
+                class="bg-white rounded-md bg-opacity-80 border-0 leading-normal resize-none w-full h-40 py-2 px-4 hover:border-main"
+                name="body" placeholder='Your Vision' id="body">{{ body }}</textarea>
+            <div class="flex">
+                <div class="w-full"></div>
+                <input type='submit'
+                    class="hover:cursor-pointer bg-main text-white font-medium py-2 px-8 rounded-md tracking-wide mr-1 hover:opacity-50"
+                    value='Send Message'>
+                <div class="w-full"></div>
+            </div>
+        </div>
+    </form>
+</div>

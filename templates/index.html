@@ -6,64 +6,31 @@
 {% block content %}
 
 <div>
-    <div class="relative">
-        <div class="h-screen">
-            <img src="{% static 'images/background.jpg' %}" alt="" class="w-full h-full">
+    <div class=" p-8 flex flex-col justify-between bg-theme-main">
+        <!-- <div class="p-8"> -->
+        {% include "top_bar/top_bar.html" %}
+        <div class="my-2 md:my-10 lg:my-20">
+            <h1 class="text-6xl lg:text-8xl font-medium text-white">
+                FAMILY SOFTWARE DEVELOPMENT COMPANY
+            </h1>
         </div>
-        <div class="w-full h-full absolute top-0 left-0 p-8 flex flex-col justify-between">
-            <!-- <div class="p-8"> -->
-            {% include "top_bar/top_bar.html" %}
-            <div class="my-2 md:my-10 lg:my-20">
-                <h1 class="text-6xl lg:text-9xl text-white font-extrabold">
-                    Bring your ideas to life.
-                </h1>
+        <div class="lg:flex lg:space-x-4 space-y-4 justify-end">
+            <div class="">
+                <p class="text-4xl px-4 text-gray-600">
+                    Landersweb builds custom tailored web and mobile apps to enable your business to thrive and scale.
+                </p>
             </div>
-            <div class="lg:flex lg:items-center lg:space-x-4 space-y-4 justify-between">
-                <div class="lg:w-1/2">
-                    <p class="text-2xl text-white md:px-16">
-                        You have a vision, we have a solution. Let Landers take your idea and transform it into a
-                        masterfully crafted and ellegant mobile product. Complex functionality with
-                        Landersweb dedication to UI excellence allows you stand out from your competitors in the modern
-                        age.
-                    </p>
-                </div>
-                <div class="lg:w-1/2">
-                    <form method="post">
-                        {% csrf_token %}
-                        <div class="bg-white bg-opacity-30 rounded-2xl p-4 space-y-4">
-                            <div class="flex justify-between items-center">
-                                <h2 class="text-white text-4xl font-bold">
-                                    Contact Us
-                                </h2>
-                                <div
-                                    class="px-4 py-2 bg-red-700 bg-opacity-30 text-red-700 rounded-xl {% if not error %} hidden {% endif %}">
-                                    <h3>
-                                        {{ error }}
-                                    </h3>
-                                </div>
-                            </div>
-
-                            <input id="name" type="text" name="name" id="name" value="{{ name }}"
-                                placeholder='Your Name'
-                                class="bg-white bg-opacity-80 px-4 py-2 rounded-md w-full border-0 hover:border-main">
-                            <input id="email" type="text" name="email" id="email" value="{{ email }}"
-                                placeholder='Your Email'
-                                class="bg-white bg-opacity-80 px-4 py-2 rounded-md w-full border-0 hover:border-main">
-                            <textarea
-                                class="bg-white rounded-md bg-opacity-80 border-0 leading-normal resize-none w-full h-40 py-2 px-4 hover:border-main"
-                                name="body" placeholder='Your Vision' id="body">{{ body }}</textarea>
-                            <div class="flex">
-                                <div class="w-full"></div>
-                                <input type='submit'
-                                    class="hover:cursor-pointer bg-main text-white font-medium py-2 px-8 rounded-md tracking-wide mr-1 hover:opacity-50"
-                                    value='Send Message'>
-                                <div class="w-full"></div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="">
+                <img src="{% static 'images/code.png' %}" alt="" class="lg:w-5/6">
             </div>
         </div>
+    </div>
+    <div class="bg-acc-back">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#5dcfb8" fill-opacity="1"
+                d="M0,128L48,144C96,160,192,192,288,176C384,160,480,96,576,101.3C672,107,768,181,864,208C960,235,1056,213,1152,192C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
     </div>
     <div id="Services">{% include "main/services.html" %}</div>
     <div id="Products">{% include "main/products.html" %}</div>

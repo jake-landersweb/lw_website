@@ -1,63 +1,126 @@
 {% load tailwind_tags %}
 
+
 <div class="m-8 space-y-4">
     <!-- title -->
     <div>
         <h2 class="text-4xl font-extralight">
-            Services
+            What we do
         </h2>
     </div>
     <!-- main services -->
-    <div class="md:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-4 space-y-4 md:space-y-0">
-        <!-- full stack solution -->
-        <div class="bg-main w-full p-8 rounded-2xl space-y-6 flex flex-col 
-        items-center justify-center hover:scale-105 transition-all shadow-sm">
-            <span class="iconify text-white opacity-50" data-icon="ic:baseline-layers" data-width="200"
-                data-height="100"></span>
-            <h2 class="text-3xl font-extralight text-white opacity-50 tracking-wider">
-                FULL STACK SOLUTION
-            </h2>
-            <p class="text-white opacity-50">
-                Landersweb offers a wide variety of options to enable your buisiness to thrive on the web. We can handle
-                your data and website with secure providers like Amazon, and ensure a high degree of scalability as your
-                buisiness grows. Along with a flagship website and mobile app, you will be ready to appeal to all
-                customers.
-            </p>
-            <span class="iconify text-white opacity-50" data-icon="ic:round-navigate-next" data-width="150"
-                data-height="75"></span>
-        </div>
+    <div class="lg:grid lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 lg:gap-8 space-y-8 lg:space-y-0 ">
         <!-- app development -->
-        <div class="bg-acc-salmon w-full p-8 rounded-2xl space-y-6 flex flex-col 
-        items-center justify-center hover:scale-105 transition-all shadow-sm">
-            <span class="iconify text-white opacity-50" data-icon="ic:outline-phone-android" data-width="200"
-                data-height="100"></span>
-            <h2 class="text-3xl font-extralight text-white opacity-50 tracking-wider">
-                APP DEVELOPMENT
-            </h2>
-            <p class="text-white opacity-50">
-                A Landersweb specialty. A mobile app has complex and custom needs, and Landersweb can make sure you get
-                exactly what you need
-                with a modern, slick UI. Apps built with Flutter run natively on iOS and Android, so your app will run
-                lightning fast on any platform. We also offer tablet solutions written in native iOS.
-            </p>
-            <span class="iconify text-white opacity-50" data-icon="ic:round-navigate-next" data-width="150"
-                data-height="75"></span>
+        <div
+            class="group flex flex-col 
+         justify-center py-8 w-full border-2 border-gray-300 hover:bg-theme-main hover:border-0 hover:scale-105 transition-all text-gray-400 hover:text-white hover:shadow-lg">
+            <span class="iconify" data-icon="ic:outline-phone-android" data-height="100"></span>
+            <div class="py-8 px-6 space-y-6">
+                <h2 class="text-3xl font-extralight tracking-wider">
+                    MOBILE DEVELOPMENT
+                </h2>
+                <p class="text-xl tracking-wide">
+                    Masterfully crafted native mobile apps developed in Swift and Flutter.
+                </p>
+                <p
+                    class="opacity-100 h-24 sm:opacity-0 sm:h-0 sm:group-hover:opacity-100 group-hover:h-24 transition-all duration-500">
+                    Apps built with Flutter run natively on iOS and Android, so your app will run
+                    lightning fast on any platform. We also offer tablet solutions written in native iOS.
+                </p>
+            </div>
         </div>
         <!-- web development -->
-        <div class="bg-acc-pink w-full p-8 rounded-2xl space-y-6 flex flex-col 
-        items-center justify-center hover:scale-105 transition-all shadow-sm">
-            <span class="iconify text-white opacity-50" data-icon="ic:baseline-laptop" data-width="200"
-                data-height="100"></span>
-            <h2 class="text-3xl font-extralight text-white opacity-50 tracking-wider">
-                WEB DEVELOPMENT
-            </h2>
-            <p class="text-white opacity-50">
-                Need a website too? No problem! Landers will use their expertise to craft you a website using the right
-                tools for the job. Whether you want a full fledged web application or an ecomerce website, Landers will
-                design and create the perfect website using the greatest technology for you.
-            </p>
-            <span class="iconify text-white opacity-50" data-icon="ic:round-navigate-next" data-width="150"
-                data-height="75"></span>
+        <div
+            class="group flex flex-col 
+         justify-center py-8 px-6 w-full border-2 border-gray-300 hover:bg-theme-main hover:border-0 hover:scale-105 transition-all text-gray-400 hover:text-white hover:shadow-lg">
+            <span class="iconify" data-icon="ic:baseline-laptop" data-height="100"></span>
+            <div class="py-8 space-y-6">
+                <h2 class="text-3xl font-extralight tracking-wider">
+                    WEBSITES AND APPS
+                </h2>
+                <p class="text-xl tracking-wide">
+                    Beautiful, simple, and elegant websites to showcase your product or business.
+                </p>
+                <p
+                    class="opacity-100 h-24 sm:opacity-0 sm:h-0 sm:group-hover:opacity-100 group-hover:h-24 transition-all duration-500">
+                    Whether you want a full fledged web application or an ecomerce website, Landersweb will
+                    design and create the perfect website using the greatest technology for you.
+                </p>
+            </div>
+        </div>
+        <!-- web development -->
+        <div
+            class="group flex flex-col 
+         justify-center py-8 w-full border-2 border-gray-300 hover:bg-theme-main hover:border-0 hover:scale-105 transition-all text-gray-400 hover:text-white hover:shadow-lg">
+            <span class="iconify" data-icon="ic:twotone-stacked-bar-chart" data-height="100"></span>
+            <div class="py-8 space-y-6 px-6">
+                <h2 class="text-3xl font-extralight tracking-wider">
+                    DATA MANAGEMENT
+                </h2>
+                <p class="text-xl tracking-wide">
+                    Rubust and scalable cloud database systems to securly host your business data.
+                </p>
+                <p
+                    class="opacity-100 h-24 sm:opacity-0 sm:h-0 sm:group-hover:opacity-100 group-hover:h-24 transition-all duration-500">
+                    Fully configured and in the cloud, let Landersweb pick the right technology for you. Have an
+                    existing database that needs servicing? Let landers port you to the modern age.
+                </p>
+            </div>
+        </div>
+        <div
+            class="group flex flex-col 
+         justify-center py-8 px-3 w-full border-2 border-gray-300 hover:bg-theme-main hover:border-0 hover:scale-105 transition-all text-gray-400 hover:text-white hover:shadow-lg">
+            <span class="iconify" data-icon="ic:round-web" data-height="100"></span>
+            <div class="py-8 space-y-6 px-3">
+                <h2 class="text-3xl font-extralight tracking-wider">
+                    WEB PORTALS
+                </h2>
+                <p class="text-xl tracking-wide">
+                    Visualize your data in new and productive ways on the web.
+                </p>
+                <p
+                    class="opacity-100 h-24 sm:opacity-0 sm:h-0 sm:group-hover:opacity-100 group-hover:h-24 transition-all duration-500">
+                    Custom build web portals allow you to access your data and manipulate it however you need with
+                    graphing and export tools.
+                </p>
+            </div>
+        </div>
+        <div
+            class="group flex flex-col 
+         justify-center py-8 px-5 w-full border-2 border-gray-300 hover:bg-theme-main hover:border-0 hover:scale-105 transition-all text-gray-400 hover:text-white hover:shadow-lg">
+            <span class="iconify" data-icon="ic:outline-shopping-cart" data-height="100"></span>
+            <div class="py-8 space-y-6 px-1">
+                <h2 class="text-3xl font-extralight tracking-wider">
+                    E-COMMERCE
+                </h2>
+                <p class="text-xl tracking-wide">
+                    Fast and secure payment systems to interpolate seasmlessly with your bank accounts.
+                </p>
+                <p
+                    class="opacity-100 h-24 sm:opacity-0 sm:h-0 sm:group-hover:opacity-100 group-hover:h-24 transition-all duration-500">
+                    Using the latest tools, we will build out a custom e-commerce solution to help you reach
+                    your business goals. If you have an existing e-commerce system, let Landers extend and improve it!
+                </p>
+            </div>
+        </div>
+        <div
+            class="group flex flex-col 
+         justify-center py-8 px-4 w-full border-2 border-gray-300 hover:bg-theme-main hover:border-0 hover:scale-105 transition-all text-gray-400 hover:text-white hover:shadow-lg">
+            <span class="iconify" data-icon="ic:round-checklist-rtl" data-height="100"></span>
+            <div class="py-8 space-y-6 px-2">
+                <h2 class="text-3xl font-extralight tracking-wider">
+                    EXAM ADMIN TOOLS
+                </h2>
+                <p class="text-xl tracking-wide">
+                    Robust exam administering and management solution to distribute interally or externally.
+                </p>
+                <p
+                    class="opacity-100 h-24 sm:opacity-0 sm:h-0 sm:group-hover:opacity-100 group-hover:h-24 transition-all duration-500">
+                    Landersweb has over 5 years experience developing and maintaining
+                    complex exam
+                    management tools. Our existing experience can be mapped to any project or task.
+                </p>
+            </div>
         </div>
 
     </div>
