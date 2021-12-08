@@ -1,15 +1,63 @@
 {% load tailwind_tags %}
 
-<div class="flex p-2 md:pd-10 space-x-16 lg:space-x-20">
-    {% include "top_bar/bar_item.html" with title="Services" %}
-    {% include "top_bar/bar_item.html" with title="Examples" %}
-    {% include "top_bar/bar_item.html" with title="Contact" %}
-    {% include "top_bar/bar_item.html" with title="Company" %}
-    <a href="https://jakelanders.com" target="_blank">
-        <div class="">
-            <h3 class="text-opacity-50 font-extralight text-cgray-600 hover:text-opacity-100">
-                Blog
-            </h3>
+<div>
+    <div class="flex justify-between">
+        <div class="md:hidden w-full"></div>
+        <div class="hidden  px-8 md:flex p-2 md:pd-10 space-x-16 lg:space-x-20">
+            {% include "top_bar/bar_item.html" with title="Services" %}
+            {% include "top_bar/bar_item.html" with title="Examples" %}
+            {% include "top_bar/bar_item.html" with title="Contact" %}
+            {% include "top_bar/bar_item.html" with title="Company" %}
+            <a href="https://jakelanders.com" target="_blank">
+                <div class="">
+                    <h3 class="text-opacity-50 font-extralight text-cgray-600 hover:text-opacity-100">
+                        Blog
+                    </h3>
+                </div>
+            </a>
         </div>
-    </a>
+        <div class="md:hidden flex items-center mx-8">
+            <button class="outline-none mobile-menu-button">
+                <svg class=" w-6 h-6 text-gray-500 hover:text-indigo-900 " x-show="!showMenu" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div
+        class="mobile-menu bg-gray-700 space-y-4 p-4 transition-all duration-500 ease-in-out text-white hidden opacity-0 max-h-0">
+        {% include "top_bar/large_bar_item.html" with title="Services" %}
+        {% include "top_bar/large_bar_item.html" with title="Examples" %}
+        {% include "top_bar/large_bar_item.html" with title="Contact" %}
+        {% include "top_bar/large_bar_item.html" with title="Company" %}
+    </div>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            if (menu.classList.contains("opacity-0")) {
+                // set menu to open
+                menu.classList.remove("hidden");
+                // small delay then animate the opem
+                setTimeout(() => {
+                    menu.classList.remove("opacity-0");
+                    menu.classList.remove("max-h-0");
+                    menu.classList.add("opacity-100");
+                    menu.classList.add("max-h-screen");
+                }, 10);
+            } else {
+                // close menu
+                menu.classList.remove("opacity-100");
+                menu.classList.remove("max-h-screen");
+                menu.classList.add("opacity-0");
+                menu.classList.add("max-h-0");
+                // hide after animation is done
+                setTimeout(() => { menu.classList.add("hidden"); }, 500);
+            }
+        });
+    </script>
 </div>
