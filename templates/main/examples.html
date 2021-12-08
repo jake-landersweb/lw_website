@@ -1,75 +1,77 @@
 {% load static %}
 {% load tailwind_tags %}
 
-<div class="m-8 space-y-4">
+<div class="my-8">
     <!-- title -->
     <div>
-        <h2 class="text-4xl font-extralight">
-            Examples:
+        <h2 class="text-6xl font-thin text-gray-600 px-8">
+            Examples
         </h2>
     </div>
     <!-- crosscheck -->
     {% with xc_apple="https://apps.apple.com/us/app/crosscheck-hockey/id1585600361" %}
     {% with xc_google="https://play.google.com/store/apps/details?id=com.landersweb.pnflutter" %}
     {% with xc_web="https://xcheck.app" %}
-    <div
-        class="bg-main bg-opacity-30 rounded-2xl p-4 md:p-8 xl:flex items-center justify-between space-y-4 xl:space-y-0">
-        <div class="space-y-4">
-            <h2 class="text-3xl font-extralight text-main opacity-50 tracking-wider">
-                CROSSCHECK
-            </h2>
-            <div class="space-y-8">
-                <p class="text-white font-bold text-xl xl:pr-10">
-                    Helps users manage their sports team elegantly, easily, and effectively.
-                </p>
-                <div class="md:flex space-x-4 xl:flex-col xl:space-y-4 xl:space-x-0 xl:items-start hidden">
-                    <a href="{{ xc_apple }}" target="_blank"><img src="{% static 'svg/apple_app.svg' %}"
-                            alt="Download on Apple App Store" class="h-16 hover:scale-105 transition-all"></a>
-                    <a href="{{ xc_google }}" target="_blank"><img src="{% static 'svg/google_app.svg' %}"
-                            alt="Download on Google Play Store" class="h-16 hover:scale-105 transition-all"></a>
-                    <a href="{{ xc_web }}" target="_blank">
-                        <div
-                            class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
-                            <img src="{% static 'images/x_centered.png' %}" class="h-12">
-                            <div>
-                                <h2 class="text-white font-light">
-                                    Visit
-                                </h2>
-                                <h4 class="text-2xl text-white font-medium">
-                                    xcheck.app
-                                </h4>
-                            </div>
+    <?xml version="1.0" standalone="no"?>
+    <div class="">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" id="wave" style="transform:rotate(0deg); transition: 0.3s"
+            viewBox="0 0 1440 190" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                    <stop stop-color="rgba(153, 180, 207, 1)" offset="0%" />
+                    <stop stop-color="rgba(153, 180, 207, 1)" offset="100%" />
+                </linearGradient>
+            </defs>
+            <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                d="M0,114L34.3,98.2C68.6,82,137,51,206,53.8C274.3,57,343,95,411,117.2C480,139,549,146,617,133C685.7,120,754,89,823,85.5C891.4,82,960,108,1029,98.2C1097.1,89,1166,44,1234,22.2C1302.9,0,1371,0,1440,28.5C1508.6,57,1577,114,1646,126.7C1714.3,139,1783,108,1851,98.2C1920,89,1989,101,2057,101.3C2125.7,101,2194,89,2263,72.8C2331.4,57,2400,38,2469,47.5C2537.1,57,2606,95,2674,91.8C2742.9,89,2811,44,2880,25.3C2948.6,6,3017,13,3086,12.7C3154.3,13,3223,6,3291,31.7C3360,57,3429,114,3497,117.2C3565.7,120,3634,70,3703,44.3C3771.4,19,3840,19,3909,22.2C3977.1,25,4046,32,4114,47.5C4182.9,63,4251,89,4320,95C4388.6,101,4457,89,4526,76C4594.3,63,4663,51,4731,53.8C4800,57,4869,76,4903,85.5L4937.1,95L4937.1,190L4902.9,190C4868.6,190,4800,190,4731,190C4662.9,190,4594,190,4526,190C4457.1,190,4389,190,4320,190C4251.4,190,4183,190,4114,190C4045.7,190,3977,190,3909,190C3840,190,3771,190,3703,190C3634.3,190,3566,190,3497,190C3428.6,190,3360,190,3291,190C3222.9,190,3154,190,3086,190C3017.1,190,2949,190,2880,190C2811.4,190,2743,190,2674,190C2605.7,190,2537,190,2469,190C2400,190,2331,190,2263,190C2194.3,190,2126,190,2057,190C1988.6,190,1920,190,1851,190C1782.9,190,1714,190,1646,190C1577.1,190,1509,190,1440,190C1371.4,190,1303,190,1234,190C1165.7,190,1097,190,1029,190C960,190,891,190,823,190C754.3,190,686,190,617,190C548.6,190,480,190,411,190C342.9,190,274,190,206,190C137.1,190,69,190,34,190L0,190Z" />
+        </svg>
+        <div class="bg-cblue-light p-4 md:p-8 items-center justify-between space-y-4">
+            <div class="space-y-4">
+                <h2 class="text-3xl font-extralight text-main opacity-50 tracking-wider">
+                    CROSSCHECK
+                </h2>
+                <div class="space-y-8">
+                    <p class="text-white font-bold text-xl xl:pr-10">
+                        Helps users manage their sports team elegantly, easily, and effectively.
+                    </p>
+                    <div class="space-y-4 lg:space-y-0 lg:flex lg:space-x-4 lg:items-center">
+                        <div class="">
+                            <a href="{{ xc_apple }}" target="_blank"><img src="{% static 'svg/apple_app.svg' %}"
+                                    alt="Download on Apple App Store" class="h-16 hover:scale-105 transition-all"></a>
                         </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="sm:flex sm:space-x-8 sm:space-y-0 space-y-4">
-            <img src="{% static 'images/xcheck_light.png' %}" alt="" class="max-w-xs">
-            <img src="{% static 'images/xcheck_menu.png' %}" alt="" class="max-w-xs">
-            <img src=" {% static 'images/xcheck_event.png' %}" alt="" class="max-w-xs">
-        </div>
-        <div class="md:hidden items-start">
-            <a href="{{ xc_apple }}" target="_blank"><img src="{% static 'svg/apple_app.svg' %}"
-                    alt="Download on Apple App Store" class="h-16 hover:scale-105 transition-all"></a>
-            <a href="{{ xc_google }}" target="_blank"><img src="{% static 'svg/google_app.svg' %}"
-                    alt="Download on Google Play Store" class="h-16 hover:scale-105 transition-all my-4"></a>
-            <div class="flex">
-                <a href="{{ xc_web }}" target="_blank">
-                    <div
-                        class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
-                        <img src="{% static 'images/x_centered.png' %}" class="h-12">
                         <div>
-                            <h2 class="text-white font-light">
-                                Visit
-                            </h2>
-                            <h4 class="text-2xl text-white font-medium">
-                                xcheck.app
-                            </h4>
+                            <a href="{{ xc_google }}" target="_blank"><img src="{% static 'svg/google_app.svg' %}"
+                                    alt="Download on Google Play Store" class="h-16 hover:scale-105 transition-all"></a>
+                        </div>
+                        <div class="flex">
+                            <a href="{{ xc_web }}" target="_blank">
+                                <div
+                                    class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
+                                    <img src="{% static 'images/x_centered.png' %}" class="h-12">
+                                    <div>
+                                        <h2 class="text-white font-light">
+                                            Visit
+                                        </h2>
+                                        <h4 class="text-2xl text-white font-medium">
+                                            xcheck.app
+                                        </h4>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </a>
-                <div class="h-full"></div>
+                </div>
+            </div>
+            <div class="sm:flex sm:space-x-8 sm:space-y-0 space-y-4">
+                <div>
+                    <img src="{% static 'images/xcheck_light.png' %}" alt="" class="w-full object-scale-down">
+                </div>
+                <div>
+                    <img src="{% static 'images/xcheck_menu.png' %}" alt="" class="w-full object-scale-down">
+                </div>
+                <div>
+                    <img src=" {% static 'images/xcheck_event.png' %}" alt="" class="w-full object-scale-down">
+                </div>
             </div>
         </div>
     </div>
@@ -77,8 +79,21 @@
     {% endwith %}{% endwith %}
     <!-- coding blog -->
     {% with jl_web="https://jakelanders.com" %}
-    <div
-        class="bg-acc-pink bg-opacity-30 rounded-2xl p-4 md:p-8 xl:flex items-center justify-between space-y-4 xl:space-y-0">
+    <?xml version="1.0" standalone="no"?>
+    <div class="bg-pink-light">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" id="wave" style="transform:rotate(180deg); transition: 0.3s"
+            viewBox="0 0 1440 190" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                    <stop stop-color="rgba(153, 180, 207, 1)" offset="0%" />
+                    <stop stop-color="rgba(153, 180, 207, 1)" offset="100%" />
+                </linearGradient>
+            </defs>
+            <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                d="M0,38L34.3,60.2C68.6,82,137,127,206,133C274.3,139,343,108,411,107.7C480,108,549,139,617,136.2C685.7,133,754,95,823,88.7C891.4,82,960,108,1029,126.7C1097.1,146,1166,158,1234,142.5C1302.9,127,1371,82,1440,63.3C1508.6,44,1577,51,1646,57C1714.3,63,1783,70,1851,60.2C1920,51,1989,25,2057,28.5C2125.7,32,2194,63,2263,69.7C2331.4,76,2400,57,2469,44.3C2537.1,32,2606,25,2674,28.5C2742.9,32,2811,44,2880,57C2948.6,70,3017,82,3086,88.7C3154.3,95,3223,95,3291,88.7C3360,82,3429,70,3497,69.7C3565.7,70,3634,82,3703,91.8C3771.4,101,3840,108,3909,117.2C3977.1,127,4046,139,4114,120.3C4182.9,101,4251,51,4320,53.8C4388.6,57,4457,114,4526,142.5C4594.3,171,4663,171,4731,155.2C4800,139,4869,108,4903,91.8L4937.1,76L4937.1,190L4902.9,190C4868.6,190,4800,190,4731,190C4662.9,190,4594,190,4526,190C4457.1,190,4389,190,4320,190C4251.4,190,4183,190,4114,190C4045.7,190,3977,190,3909,190C3840,190,3771,190,3703,190C3634.3,190,3566,190,3497,190C3428.6,190,3360,190,3291,190C3222.9,190,3154,190,3086,190C3017.1,190,2949,190,2880,190C2811.4,190,2743,190,2674,190C2605.7,190,2537,190,2469,190C2400,190,2331,190,2263,190C2194.3,190,2126,190,2057,190C1988.6,190,1920,190,1851,190C1782.9,190,1714,190,1646,190C1577.1,190,1509,190,1440,190C1371.4,190,1303,190,1234,190C1165.7,190,1097,190,1029,190C960,190,891,190,823,190C754.3,190,686,190,617,190C548.6,190,480,190,411,190C342.9,190,274,190,206,190C137.1,190,69,190,34,190L0,190Z" />
+        </svg>
+    </div>
+    <div class="bg-pink-light p-4 md:p-8 items-center justify-between space-y-4">
         <div class="space-y-4">
             <h2 class="text-3xl font-extralight text-acc-pink opacity-50 tracking-wider">
                 CODING BLOG
@@ -87,7 +102,7 @@
                 <p class="text-white font-bold text-xl xl:pr-10">
                     Show off your smooth coding skills in a stylish and lightweight blog.
                 </p>
-                <div class="md:flex space-x-4 xl:flex-col xl:space-y-4 xl:space-x-0 xl:items-start hidden">
+                <div class="space-y-0 flex space-x-4 items-center">
                     <a href="{{ jl_Web }}" target="_blank">
                         <div
                             class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
@@ -107,24 +122,18 @@
         <div class="sm:flex sm:space-x-8 sm:space-y-0 space-y-4">
             <img src="{% static 'images/jake_web.png' %}" alt="" class="w-full rounded-lg">
         </div>
-        <div class="md:hidden items-start">
-            <div class="flex">
-                <a href="{{ jl_web }}" target="_blank">
-                    <div
-                        class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
-                        <div>
-                            <h2 class="text-white font-light">
-                                Visit
-                            </h2>
-                            <h4 class="text-2xl text-white font-medium">
-                                jakelanders.com
-                            </h4>
-                        </div>
-                    </div>
-                </a>
-                <div class="h-full"></div>
-            </div>
-        </div>
     </div>
+    <?xml version="1.0" standalone="no"?>
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" id="wave" style="transform:rotate(180deg); transition: 0.3s"
+        viewBox="0 0 1440 190" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                <stop stop-color="rgba(255, 221, 219, 1)" offset="0%" />
+                <stop stop-color="rgba(255, 221, 219, 1)" offset="100%" />
+            </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+            d="M0,133L34.3,114C68.6,95,137,57,206,50.7C274.3,44,343,70,411,91.8C480,114,549,133,617,120.3C685.7,108,754,63,823,66.5C891.4,70,960,120,1029,139.3C1097.1,158,1166,146,1234,139.3C1302.9,133,1371,133,1440,120.3C1508.6,108,1577,82,1646,60.2C1714.3,38,1783,19,1851,12.7C1920,6,1989,13,2057,15.8C2125.7,19,2194,19,2263,19C2331.4,19,2400,19,2469,28.5C2537.1,38,2606,57,2674,53.8C2742.9,51,2811,25,2880,22.2C2948.6,19,3017,38,3086,63.3C3154.3,89,3223,120,3291,136.2C3360,152,3429,152,3497,133C3565.7,114,3634,76,3703,66.5C3771.4,57,3840,76,3909,72.8C3977.1,70,4046,44,4114,41.2C4182.9,38,4251,57,4320,57C4388.6,57,4457,38,4526,53.8C4594.3,70,4663,120,4731,145.7C4800,171,4869,171,4903,171L4937.1,171L4937.1,190L4902.9,190C4868.6,190,4800,190,4731,190C4662.9,190,4594,190,4526,190C4457.1,190,4389,190,4320,190C4251.4,190,4183,190,4114,190C4045.7,190,3977,190,3909,190C3840,190,3771,190,3703,190C3634.3,190,3566,190,3497,190C3428.6,190,3360,190,3291,190C3222.9,190,3154,190,3086,190C3017.1,190,2949,190,2880,190C2811.4,190,2743,190,2674,190C2605.7,190,2537,190,2469,190C2400,190,2331,190,2263,190C2194.3,190,2126,190,2057,190C1988.6,190,1920,190,1851,190C1782.9,190,1714,190,1646,190C1577.1,190,1509,190,1440,190C1371.4,190,1303,190,1234,190C1165.7,190,1097,190,1029,190C960,190,891,190,823,190C754.3,190,686,190,617,190C548.6,190,480,190,411,190C342.9,190,274,190,206,190C137.1,190,69,190,34,190L0,190Z" />
+    </svg>
     {% endwith %}
 </div>

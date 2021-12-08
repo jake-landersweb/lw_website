@@ -1,0 +1,141 @@
+{% load tailwind_tags %}
+
+<div class="m-8 space-y-4">
+    <div>
+        <h2 class="text-6xl font-thin text-gray-600">
+            Select Your Interests
+        </h2>
+    </div>
+    <div class="grid xl:grid-cols-3 grid-cols-1 lg:gap-8 space-y-8 lg:space-y-0">
+        <button class="outline-none web-button">
+            <div
+                class="web group flex flex-col 
+         justify-center py-8 px-6 w-full border-2 border-gray-300 bg-transparent hover:bg-theme-main hover:border-theme-main hover:bg-opacity-50 transition-all text-gray-400 hover:text-white hover:shadow-lg">
+                <span class="iconify" data-icon="ic:baseline-laptop" data-height="100"></span>
+                <div class="py-8 space-y-6">
+                    <h2 class="text-3xl font-extralight tracking-wider">
+                        WEB SERVICES
+                    </h2>
+                    <p class="text-xl tracking-wide">
+                        Ellegant websites, portals and more.
+                    </p>
+                    <div class="space-y-2">
+                        <p class="font-bold text-sm">
+                            FROM
+                        </p>
+                        <h2 class="font-extralight text-8xl">
+                            $5,000
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </button>
+        <button class="outline-none mobile-button">
+            <div
+                class="mobile group flex flex-col 
+         justify-center py-8 w-full border-2 border-gray-300 bg-transparent hover:bg-theme-main hover:border-theme-main hover:bg-opacity-50 transition-all text-gray-400 hover:text-white hover:shadow-lg">
+                <span class="iconify" data-icon="ic:outline-phone-android" data-height="100"></span>
+                <div class="py-8 px-6 space-y-6">
+                    <h2 class="text-3xl font-extralight tracking-wider">
+                        MOBILE DEVELOPMENT
+                    </h2>
+                    <p class="text-xl tracking-wide">
+                        Masterfully crafted native mobile apps developed in Swift and Flutter.
+                    </p>
+                    <div class="space-y-2">
+                        <p class="font-bold text-sm">
+                            FROM
+                        </p>
+                        <h2 class="font-extralight text-8xl">
+                            $7,500
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </button>
+        <button class="outline-none service-button">
+            <div
+                class="service group flex flex-col 
+     justify-center py-8 px-3 w-full border-2 border-gray-300 bg-transparent hover:bg-theme-main hover:border-theme-main hover:bg-opacity-50 transition-all text-gray-400 hover:text-white hover:shadow-lg">
+                <span class="iconify" data-icon="ic:outline-library-books" data-height="100"></span>
+                <div class="py-8 px-3 space-y-6">
+                    <h2 class="text-3xl font-extralight tracking-wider ">
+                        SERVICES
+                    </h2>
+                    <p class="text-xl tracking-wide">
+                        Databases, e-commerce, web tools and more
+                    </p>
+                    <div class="space-y-2">
+                        <p class="font-bold text-sm">
+                            FROM
+                        </p>
+                        <h2 class="font-extralight text-8xl">
+                            $5,000
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </button>
+    </div>
+    <script>
+        const web = document.querySelector(".web");
+        const mobile = document.querySelector(".mobile");
+        const service = document.querySelector(".service");
+
+        const webButton = document.querySelector("button.web-button");
+        const mobileButton = document.querySelector("button.mobile-button");
+        const serviceButton = document.querySelector("button.service-button");
+
+        webButton.addEventListener("click", () => {
+            if (web.classList.contains("bg-transparent")) {
+                web.classList.remove("bg-transparent");
+                web.classList.remove("text-gray-400");
+                web.classList.remove("hover:bg-opacity-50");
+                web.classList.add("bg-theme-main");
+                web.classList.add("text-white");
+                web.classList.add("border-theme-main");
+            } else {
+                web.classList.remove("bg-theme-main");
+                web.classList.remove("text-white");
+                web.classList.remove("border-theme-main");
+                web.classList.add("bg-transparent");
+                web.classList.add("text-gray-400");
+                web.classList.add("hover:bg-opacity-50");
+            }
+        });
+        mobileButton.addEventListener("click", () => {
+            if (mobile.classList.contains("bg-transparent")) {
+                mobile.classList.remove("bg-transparent");
+                mobile.classList.remove("text-gray-400");
+                mobile.classList.remove("hover:bg-opacity-50");
+                mobile.classList.add("bg-theme-main");
+                mobile.classList.add("text-white");
+                mobile.classList.add("border-theme-main");
+            } else {
+                mobile.classList.remove("bg-theme-main");
+                mobile.classList.remove("text-white");
+                mobile.classList.remove("border-theme-main");
+                mobile.classList.add("bg-transparent");
+                mobile.classList.add("text-gray-400");
+                mobile.classList.add("hover:bg-opacity-50");
+            }
+        });
+        serviceButton.addEventListener("click", () => {
+            if (service.classList.contains("bg-transparent")) {
+                service.classList.remove("bg-transparent");
+                service.classList.remove("text-gray-400");
+                service.classList.remove("hover:bg-opacity-50");
+                service.classList.add("bg-theme-main");
+                service.classList.add("text-white");
+                service.classList.add("border-theme-main");
+            } else {
+                service.classList.remove("bg-theme-main");
+                service.classList.remove("text-white");
+                service.classList.remove("border-theme-main");
+                service.classList.add("bg-transparent");
+                service.classList.add("text-gray-400");
+                service.classList.add("hover:bg-opacity-50");
+            }
+        });
+    </script>
+</div>

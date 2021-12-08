@@ -48,6 +48,14 @@ module.exports = {
                     main: "#5dcfb8",
                     bg: "#0e152e",
                 },
+                pink: {
+                    DEFAULT: "#ff948e",
+                    light: "#ffdddb",
+                },
+                cblue: {
+                    light: "#99b4cf",
+                    DEFAULT: "#5dcfb8"
+                },
                 acc: {
                     salmon: "#ee5c7a",
                     pink: "#ff948e",
