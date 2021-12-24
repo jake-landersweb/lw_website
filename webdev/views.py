@@ -7,9 +7,7 @@ from . import funcs, mail
 # Create your views here.
 
 
-def index(
-    request,
-):
+def index(request,):
     if request.method == "POST":
         print("post")
         # validate form data
@@ -21,28 +19,40 @@ def index(
         valid = funcs.contact_valid({"fname": fname, "email": email, "body": body})
 
         if valid == "success":
-            print("valid")
             # send mail
-            response = mail.send_mail(
-                ["jake@landersweb.com", "kevin@landersweb.com"],
-                "Website Work Request",
-                "{}\n\n- {} {}\n({})".format(
-                    body, fname, lname if lname is not None else "", email
-                ),
-            )
-            # response = True
+            # response = mail.send_mail(
+            #     ["jake@landersweb.com", "kevin@landersweb.com"],
+            #     "Website Work Request",
+            #     "{}\n\n- {} {}\n({})".format(
+            #         body, fname, lname if lname is not None else "", email
+            #     ),
+            # )
+            response = True
             if response:
                 print("successfully sent message")
-                return HttpResponseRedirect(reverse("index"))
+                request.method = "GET"
+                return render(
+                    request,
+                    "index.html",
+                    {
+                        "fname": "",
+                        "lname": "",
+                        "email": "",
+                        "body": "",
+                        "success": "Successfully sent your message.",
+                        "anchor": "Contact",
+                    },
+                )
         else:
             error = valid
+            anchor = "Contact"
     else:
-        print("get")
         fname = ""
         lname = ""
         email = ""
         body = ""
         error = ""
+        anchor = ""
     return render(
         request,
         "index.html",
@@ -52,5 +62,6 @@ def index(
             "email": email,
             "body": body,
             "error": error,
+            "anchor": anchor,
         },
     )

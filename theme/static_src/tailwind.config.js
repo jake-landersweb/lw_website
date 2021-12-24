@@ -6,19 +6,10 @@
  */
 
 module.exports = {
-    /**
-     * Stylesheet generation mode.
-     *
-     * Set mode to "jit" if you want to generate your styles on-demand as you author your templates;
-     * Set mode to "aot" if you want to generate the stylesheet in advance and purge later (aka legacy mode).
-     */
-    mode: "jit",
-
-    purge: [
+    content: [
 
         '../../templates/**/*.html',
     ],
-    darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
             transitionProperty: {
@@ -73,6 +64,8 @@ module.exports = {
     },
     variants: {
         extend: {},
+        width: ["responsive", "hover", "focus"],
+        height: ["responsive", "hover", "focus"],
     },
     plugins: [
         /**

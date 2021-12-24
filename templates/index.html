@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<div>
+<div class="scroll-smooth">
     <div class="py-8 flex flex-col justify-between bg-theme-main">
         <!-- <div class="p-8"> -->
         {% include "top_bar/top_bar.html" %}
@@ -36,12 +36,24 @@
     <div id="Services">{% include "main/services.html" %}</div>
     <div id="Examples">{% include "main/examples.html" %}</div>
     <div id="Contact">{% include "main/contact.html" %}</div>
-    <div class="mx-8">
+    {% if anchor %}
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            window.location = '#{{ anchor }}'
+        });
+    </script>
+    {% endif %}
+    <div class="mx-8 grid place-items-center">
         <form class="w-full max-w-4xl" method="post">
             {% csrf_token %}
             <div class="flex mb-2 {% if not error %} hidden {% endif %}">
                 <h3 class="px-4 py-2 bg-red-700 bg-opacity-30 text-red-700">
                     {{ error }}
+                </h3>
+            </div>
+            <div class="flex mb-2 {% if not success %} hidden {% endif %}">
+                <h3 class="px-4 py-2 bg-theme-main bg-opacity-30 text-white">
+                    {{ success }}
                 </h3>
             </div>
             <div class="flex space-x-4">

@@ -1,7 +1,7 @@
 {% load static %}
 {% load tailwind_tags %}
 
-<div class="my-8">
+<div class="my-8 scroll-smooth">
     <!-- title -->
     <div>
         <h2 class="text-6xl font-thin text-gray-600 px-8">
@@ -61,13 +61,16 @@
             </div>
             <div class="sm:flex sm:space-x-8 sm:space-y-0 space-y-4">
                 <div>
-                    <img src="{% static 'images/xcheck_light.png' %}" alt="" class="w-full object-scale-down">
+                    <img src="{% static 'images/xcheck_light.png' %}" alt=""
+                        class="w-full object-scale-down max-w-[300px]">
                 </div>
                 <div>
-                    <img src="{% static 'images/xcheck_menu.png' %}" alt="" class="w-full object-scale-down">
+                    <img src="{% static 'images/xcheck_menu.png' %}" alt=""
+                        class="w-full object-scale-down max-w-[300px]">
                 </div>
                 <div>
-                    <img src=" {% static 'images/xcheck_event.png' %}" alt="" class="w-full object-scale-down">
+                    <img src=" {% static 'images/xcheck_event.png' %}" alt=""
+                        class="w-full object-scale-down max-w-[300px]">
                 </div>
             </div>
         </div>
@@ -101,7 +104,7 @@
                     Show off your smooth coding skills in a stylish and lightweight blog.
                 </p>
                 <div class="space-y-0 flex space-x-4 items-center">
-                    <a href="{{ jl_Web }}" target="_blank">
+                    <a href="{{ jl_web }}" target="_blank">
                         <div
                             class="flex items-center space-x-2 h-16 px-3 bg-black rounded-lg hover:scale-105 transition-all">
                             <div>
@@ -118,7 +121,7 @@
             </div>
         </div>
         <div class="sm:flex sm:space-x-8 sm:space-y-0 space-y-4">
-            <img src="{% static 'images/jake_web.png' %}" alt="" class="w-full rounded-lg">
+            <img src="{% static 'images/jake_web.png' %}" alt="" class="rounded-lg max-h-[700px] w-auto">
         </div>
     </div>
     <?xml version="1.0" standalone="no"?>
