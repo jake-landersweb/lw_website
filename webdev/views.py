@@ -20,14 +20,14 @@ def index(request,):
 
         if valid == "success":
             # send mail
-            # response = mail.send_mail(
-            #     ["jake@landersweb.com", "kevin@landersweb.com"],
-            #     "Website Work Request",
-            #     "{}\n\n- {} {}\n({})".format(
-            #         body, fname, lname if lname is not None else "", email
-            #     ),
-            # )
-            response = True
+            response = mail.send_mail(
+                ["jake@landersweb.com", "kevin@landersweb.com"],
+                "Website Work Request",
+                "{}\n\n- {} {}\n({})".format(
+                    body, fname, lname if lname is not None else "", email
+                ),
+            )
+            # response = True
             if response:
                 print("successfully sent message")
                 request.method = "GET"
