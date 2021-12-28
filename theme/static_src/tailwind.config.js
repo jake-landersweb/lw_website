@@ -12,6 +12,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            backgroundImage: {
+                'xcheck-white': "url('../../../static/images/x_white_centered.png')",
+            },
             transitionProperty: {
                 height: 'height'
             },
@@ -58,6 +61,16 @@ module.exports = {
                     green: "#defde0",
                     blue: "#def3fd",
                     purple: "#f0fefd",
+                },
+                xcheck: {
+                    1: "#00a1ff",
+                    2: "#00ff8f",
+                },
+                cheetah: {
+                    gold: "#fadb52"
+                },
+                etsi: {
+                    green: "#8cc63e"
                 }
             },
         },
