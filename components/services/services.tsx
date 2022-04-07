@@ -1,14 +1,14 @@
 import Section from "../misc/section"
 import ServiceItem from "./service_item"
-import { IoPhonePortraitOutline, IoTvOutline } from 'react-icons/io5';
+import { IoPhonePortraitOutline, IoTvOutline, IoSchoolOutline } from 'react-icons/io5';
 import { GiHockey } from 'react-icons/gi'
 import { MdOutlineSell } from 'react-icons/md'
-import { FaDatabase, FaWrench } from 'react-icons/fa'
+import { FaWrench } from 'react-icons/fa'
 
 const Services = () => {
     return <>
         <Section props={{
-            title: "Services",
+            title: "Main Services",
             content: <>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
                     <ServiceItem props={{
@@ -24,7 +24,7 @@ const Services = () => {
                         icon: <IoTvOutline size="50px" />
                     }} />
                     <ServiceItem props={{
-                        title: "Sports Teams",
+                        title: "Sport Management",
                         description: "Want a custom site and app for your team? Let us build around the Crosscheck Sports Engine.",
                         route: "/crosscheck",
                         icon: <GiHockey size="50px" />
@@ -36,10 +36,10 @@ const Services = () => {
                         icon: <MdOutlineSell size="50px" />
                     }} />
                     <ServiceItem props={{
-                        title: "Data Mangement",
-                        description: "Rubust and scalable cloud database systems to securly host your business data.",
+                        title: "Exam Management",
+                        description: "We have a custom LMS to quickly add functionality to your existing products.",
                         route: "/data",
-                        icon: <FaDatabase size="50px" />
+                        icon: <IoSchoolOutline size="50px" />
                     }} />
                     <ServiceItem props={{
                         title: "Maintenance",

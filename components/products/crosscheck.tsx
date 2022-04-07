@@ -7,7 +7,11 @@ import { SiAmazondynamodb, SiNextdotjs } from 'react-icons/si'
 import { GrGraphQl } from 'react-icons/gr'
 import LearnMore from "../misc/learn_more"
 
-const CrosscheckItem = () => {
+type CrosscheckItemProps = {
+    showLearnMore: boolean
+}
+
+const CrosscheckItem = ({ props }: { props: CrosscheckItemProps }) => {
     return <>
         <ProductItem props={{
             title: "Crosscheck Sports",
@@ -32,7 +36,7 @@ const CrosscheckItem = () => {
                             }} />
                             <TechItem props={{
                                 title: "NextJS",
-                                url: "/nextjs",
+                                url: "/web",
                                 icon: <SiNextdotjs size="40px" />,
                                 className: "bg-xc text-xc",
                                 hasColors: true,
@@ -58,12 +62,12 @@ const CrosscheckItem = () => {
                             }} />
                         </div>
                     </div>
-                    <div className="grid place-items-center">
+                    {props.showLearnMore ? <div className="grid place-items-center">
                         <LearnMore props={{
                             title: "Learn More",
                             url: "/crosscheck"
                         }} />
-                    </div>
+                    </div> : <></>}
                 </div>
             </>,
             color: "bg-xc",
@@ -75,32 +79,6 @@ const CrosscheckItem = () => {
                         className: "xs:max-w-[650px]"
                     }} />
                 </div>
-                {/* <div className="hidden xl:flex ">
-                    <ImageWrapper props={{
-                        url: '/images/xcheck_3.png',
-                        alt: "iOS chat page",
-                        className: "xs:max-w-[650px]"
-                    }} />
-                </div>
-                <div className="hidden md:flex xl:hidden">
-                    <ImageWrapper props={{
-                        url: '/images/schedule.png',
-                        alt: "iOS schedule",
-                        className: ""
-                    }} />
-                    <ImageWrapper props={{
-                        url: '/images/chat.png',
-                        alt: "iOS chat page",
-                        className: ""
-                    }} />
-                </div>
-                <div className="md:hidden flex">
-                    <ImageWrapper props={{
-                        url: '/images/schedule.png',
-                        alt: "iOS schedule",
-                        className: "xs:w-[300px] w-[250px]"
-                    }} />
-                </div> */}
             </>
         }} />
     </>

@@ -1,9 +1,10 @@
+import Link from "next/link"
 import Wave2 from "./assets/wave2"
 
 const Footer = () => {
     return <div className="space-y-[-1px]">
         <Wave2 props={{
-            className: "fill-gray-700"
+            className: "fill-gray-700 mx-[-1px]"
         }} />
         <div className="bg-gray-700 p-8 divide-y divide-gray-500 w-full">
             <div className="grid place-items-center mb-8">
@@ -13,7 +14,6 @@ const Footer = () => {
                             Landersweb
                         </h3>
                         <div className="md:space-y-4 space-y-2 text-white text-sm">
-
                             <a href=" mailto:success@landersweb.com">
                                 success@landersweb.com
                             </a>
@@ -35,25 +35,32 @@ const Footer = () => {
                         </h3>
                         <div className="md:space-y-4 space-y-2 text-white text-sm">
                             <p>
-                                Flutter
+                                <a href="/mobile" className="underline hover:opacity-50 transition-opacity">
+                                    Flutter
+                                </a>
                             </p>
                             <p>
-                                SwiftUI
+                                <a href="/mobile" className="underline hover:opacity-50 transition-opacity">
+                                    SwiftUI
+                                </a>
                             </p>
                             <p>
-                                Django
+                                <a href="/web" className="underline hover:opacity-50 transition-opacity">
+                                    .NET
+                                </a>
                             </p>
                             <p>
-                                .NET
+                                <a href="/mobile" className="underline hover:opacity-50 transition-opacity">
+                                    UIKit
+                                </a>
                             </p>
                             <p>
-                                UIKit
+                                <a href="/dynamodb" className="underline hover:opacity-50 transition-opacity">
+                                    AWS DynamoDB
+                                </a>
                             </p>
                             <p>
-                                AWS DynamoDB NoSQL
-                            </p>
-                            <p>
-                                MongoDB NoSQL
+                                MongoDB
                             </p>
                             <p>
                                 MySQL
@@ -72,13 +79,14 @@ const Footer = () => {
                         </h3>
                         <div className="md:space-y-4 space-y-2 text-white text-sm">
                             <p>
-                                Mobile App Development
+                                <a href="/mobile" className="underline hover:opacity-50 transition-opacity">
+                                    Mobile App Development
+                                </a>
                             </p>
-                            <p>
-                                Web Development
-                            </p>
-                            <p>
-                                Web Portals
+                            <p className="underline hover:opacity-50 transition-opacity">
+                                <a href="/web" className="underline hover:opacity-50 transition-opacity">
+                                    Web Development
+                                </a>
                             </p>
                             <p>
                                 Database Development

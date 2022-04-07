@@ -9,7 +9,9 @@ const Products = () => {
         <Section props={{
             title: "",
             content: <div className="space-y-32">
-                <CrosscheckItem />
+                <CrosscheckItem props={{
+                    showLearnMore: true,
+                }} />
                 <CheetahItem />
                 <CalorieMeItem />
             </div>,

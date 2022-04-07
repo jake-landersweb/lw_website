@@ -13,7 +13,7 @@ const CheetahItem = () => {
                 <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 xs:gap-4">
                     <TechItem props={{
                         title: "MS .NET",
-                        url: "/dotnet",
+                        url: "/web",
                         icon: <SiHtml5 size="40px" />,
                         className: "bg-cheetah text-cheetah",
                         hasColors: true,

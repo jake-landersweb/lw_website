@@ -1,4 +1,3 @@
-import Form from "../../components/misc/form"
 import ImageWrapper from "../../components/misc/image"
 import ProductItem from "../../components/products/product_item"
 import TechWrapper from "../../components/technologies/tech_wrapper"
@@ -6,16 +5,11 @@ import TechWrapper from "../../components/technologies/tech_wrapper"
 const Mobile = () => {
     return <>
         <TechWrapper props={{
+            title: "Mobile Development",
+            description: "This is where Landersweb turns your idea into a fully scalable, native mobile app experience. Whether you are looking to get to market fast with Flutter or want a more custom and integrated solution, our designers need for UI excellence will ensure your mobile app is a hit with your customers.",
+            formTitle: "Ready to Build Your Next Mobile App?",
             content: <>
                 <div className="space-y-16">
-                    <div className="space-y-8">
-                        <h1 className="text-2xl xs:text-4xl font-bold">
-                            Mobile Development
-                        </h1>
-                        <h3 className="text-xl xm:text-2xl font-medium">
-                            This is where Landersweb turns your idea into a fully scalable, native mobile app experience.
-                        </h3>
-                    </div>
                     <ProductItem props={{
                         title: "SwiftUI",
                         description: "",
@@ -55,9 +49,6 @@ const Mobile = () => {
                             }} />
                         </>,
                         reverse: true
-                    }} />
-                    <Form props={{
-                        title: "Ready to Build Your Next Mobile App?"
                     }} />
                 </div>
             </>

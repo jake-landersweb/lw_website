@@ -3,11 +3,11 @@ import ImageWrapper from "./misc/image"
 
 const Initial = () => {
     return <>
-        <div className="">
+        <div className="space-y-[-1px]">
             <div className="h-[100px] bg-primary w-full"></div>
-            <div className="bg-primary w-full">
-                <div className="px-5 lg:px-20 md:px-10 grid grid-cols-1 sm:grid-cols-2 place-items-center">
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white text-opacity-70">
+            <div className="bg-primary">
+                <div className="sm:flex items-center justify-center pl-5 pr-5 sm:pr-0 sm:pl-10 md:pl-20">
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-white text-opacity-70 sm:max-w-[50%]">
                         We build custom tailored apps to enable your business to thrive at scale.
                     </h1>
                     <ImageWrapper props={{
@@ -18,7 +18,7 @@ const Initial = () => {
                 </div>
             </div>
             <Wave1 props={{
-                className: "fill-primary"
+                className: "fill-primary mx-[-1px]"
             }} />
         </div>
     </>

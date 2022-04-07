@@ -11,13 +11,14 @@ import { useState } from "react"
 import Form from "../../components/misc/form"
 
 const Crosscheck = () => {
-
-
     return <>
         <TechWrapper props={{
+            title: "",
+            description: "",
+            formTitle: "Ready to Take Your Team to the Next Level?",
             content: <>
                 <div className="space-y-16">
-                    <div className="flex items-center space-x-2 md:space-x-4">
+                    {/* <div className="flex items-center space-x-2 md:space-x-4">
                         <ImageWrapper props={{
                             url: "/svg/xcheck_blue.svg",
                             alt: "Crosscheck Logo",
@@ -26,8 +27,10 @@ const Crosscheck = () => {
                         <h1 className="text-2xl xs:text-4xl font-bold">
                             Crosscheck Sports
                         </h1>
-                    </div>
-                    <CrosscheckItem />
+                    </div> */}
+                    <CrosscheckItem props={{
+                        showLearnMore: false,
+                    }} />
                     <h3 className="text-xl font-medium">
                         Crosscheck Sports is all about managing your team easily and effectively. This gives you a tool to manage your sports team, create seasons, events, games and practices while managing the attendance you will have at these events. Crosscheck Sports is focused on giving a world class roster management experience to team owners and managers, while also delivering a seamless and fluid UI for your team members to interact with. With an integrated chat and stat tracking system, take your team to the next level with Crosscheck Sports.
                     </h3>
@@ -120,9 +123,6 @@ const Crosscheck = () => {
 
                         </div>
                     </div>
-                    <Form props={{
-                        title: "Ready to Take Your Team to the Next Level?"
-                    }} />
                 </div>
             </>
         }} />

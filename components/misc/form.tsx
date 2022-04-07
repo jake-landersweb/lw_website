@@ -20,13 +20,17 @@ const Form = ({ props }: { props: FormProps }) => {
         return message !== ""
     }
 
+    const sendMessage = () => {
+
+    }
+
     return <>
         <div className="space-y-4">
             <h2 className="text-2xl font-bold">
                 {props.title}
             </h2>
             <div className="space-y-2">
-                <div className="md:flex md:space-x-2 space-y-2 md:space-y-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <Field props={{
                         initValue: "",
                         label: "Name",

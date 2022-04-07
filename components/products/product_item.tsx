@@ -9,14 +9,6 @@ type ProductItemProps = {
 
 const ProductItem = ({ props }: { props: ProductItemProps }) => {
     const content = <>
-        {/* <div className="relative">
-            <div className="z-0 absolute grid place-items-center w-[100%] h-[100%]">
-                <div className={`${props.color} bg-opacity-50 w-full h-full rounded-full blur-3xl`}></div>
-            </div>
-            <div className="relative z-10">
-                {props.content}
-            </div>
-        </div> */}
         <div className="relative z-10">
             {props.content}
         </div>
@@ -29,7 +21,7 @@ const ProductItem = ({ props }: { props: ProductItemProps }) => {
                     {content}
                 </div> : <></>}
                 <div className="grid grid-cols-1 space-y-4 place-items-center">
-                    <h2 className="text-4xl font-bold">
+                    <h2 className="text-2xl md:text-4xl font-bold">
                         {props.title}
                     </h2>
                     <h3 className="text-xl">
